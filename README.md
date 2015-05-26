@@ -1,1 +1,2 @@
-# hero-aicademy
+# Hero AIcademy
+
