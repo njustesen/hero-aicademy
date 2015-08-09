@@ -26,7 +26,7 @@ game.run();
 # How to make your own AI
 ```
 public class RandomAI implements AI {
-@Override
+  @Override
   public Action act(GameState state, long ms) {
     List<Actions> actions = state.possibleActions(actions);	
     return actions.get(0);  // Return first possible action
