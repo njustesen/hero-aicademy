@@ -8,7 +8,9 @@ Hero AIcademy is a clone of the iOS game Hero Academy. The game features only th
 ```
 AI p1 = null;
 AI p2 = null;
-Game game = new Game(null, new GameArguments(true, p1, p2, "a", DECK_SIZE.STANDARD));
+String mapName = "a"; // Name of map file in map folder
+boolean graphics = true;
+Game game = new Game(null, new GameArguments(graphics, p1, p2, mapName, DECK_SIZE.STANDARD));
 game.run();
 ```
 
