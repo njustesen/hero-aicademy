@@ -16,7 +16,6 @@ game.run();
 
 ## Human vs. AI
 ```
-int budget = 4000; // 4 sec for AI's
 AI p1 = null;
 AI p2 = new RandomAI(RAND_METHOD.BRUTE);
 GameArguments gameArgs = new GameArguments(true, p1, p2, "a", DECK_SIZE.STANDARD);
