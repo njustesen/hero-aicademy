@@ -27,7 +27,7 @@ game.run();
 
 # How to make your own AI
 ```
-public class myAwesomeAI implements AI {
+public class MyAwesomeAI implements AI {
   @Override
   public Action act(GameState state, long ms) {
     List<Actions> actions = state.possibleActions(actions);	
