@@ -27,8 +27,9 @@ game.run();
 ```
 public class RandomAI implements AI {
 @Override
-public Action act(GameState state, long ms) {
-  List<Actions> actions = state.possibleActions(actions);	
-  return actions.get(0);  // Return first possible action
+  public Action act(GameState state, long ms) {
+    List<Actions> actions = state.possibleActions(actions);	
+    return actions.get(0);  // Return first possible action
+  }
 }
 ```
