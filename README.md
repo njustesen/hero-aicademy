@@ -1,6 +1,6 @@
 # Hero AIcademy
 
-Hero AIcademy is a Java clone of the iOS game Hero Academy. The game features only the Council team and is optimized for simulations and AI game reserach.
+Hero AIcademy is a Java clone of the iOS game Hero Academy. The game features only the Council team and is optimized for simulations and game AI research.
 
 # How to run
 
