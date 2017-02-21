@@ -150,7 +150,11 @@ public class OnlineEvolution implements AI, AiVisualizor {
 
 		if (visualizor != null){
 			visualizor.p1 = state.p1Turn;
-			visualizor.update();
+			try{
+				visualizor.update();
+			} catch (Exception e) {
+				//e.printStackTrace();
+			}
 			while(visualizor.rendering){
 				try {
 					Thread.sleep(100);
@@ -235,7 +239,7 @@ public class OnlineEvolution implements AI, AiVisualizor {
 
 	@Override
 	public String title() {
-		return "Rolling Horizon Evolution";
+		return "Online Evolution";
 	}
 
 	@Override

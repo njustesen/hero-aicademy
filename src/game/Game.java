@@ -79,12 +79,12 @@ public class Game {
 		
 		if (gameArgs.gfx){
 			this.ui = new UI(this.state, (this.player1 == null), (this.player2 == null), player1Title, player2Title );
-
+			/*
 			if (player1 instanceof AiVisualizor)
 				((AiVisualizor)player1).enableVisualization(ui);
 			if (player2 instanceof AiVisualizor)
 				((AiVisualizor)player2).enableVisualization(ui);
-		
+			*/
 		}
 		
 		history = new Stack<GameState>();
