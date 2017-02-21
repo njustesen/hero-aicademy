@@ -36,6 +36,7 @@ public class APComparison {
 		}
 		int g = Integer.parseInt(args[2]);
 		
+		AI mcts = new Mcts(budget, new RolloutEvaluator(1, 1, new RandomHeuristicAI(0.5), new HeuristicEvaluator(true)));
 		AI cutting = new Mcts(budget, new RolloutEvaluator(1, 1, new RandomHeuristicAI(0.5), new HeuristicEvaluator(true)));
 		((Mcts)cutting).cut = true;
 		AI noneExp = new Mcts(budget, new RolloutEvaluator(1, 1, new RandomHeuristicAI(1), new HeuristicEvaluator(true)));
@@ -52,6 +53,8 @@ public class APComparison {
 			p1 = noneExp;
 		} else if (args[3].toLowerCase().equals("oe")){
 			p1 = onlineE;
+		} else if (args[3].toLowerCase().equals("mcts")){
+			p1 = mcts;
 		}
 		
 		if (args[4].toLowerCase().equals("cutting")){
@@ -60,14 +63,15 @@ public class APComparison {
 			p2 = noneExp;
 		} else if (args[4].toLowerCase().equals("oe")){
 			p2 = onlineE;
+		} else if (args[4].toLowerCase().equals("mcts")){
+			p2 = mcts;
 		}
 		
 		String p1Name = args[3];
 		String p2Name = args[4];
 		
-		
 		if (p1 == null || p2 == null){
-			System.out.println("5 args: budget AP games p1 p2. Players: (cutting|non|oe)");
+			System.out.println("5 args: budget AP games p1 p2. Players: (cutting|non|oe|mcts)");
 			return;
 		}
 		
