@@ -84,6 +84,7 @@ public class APComparison {
 		
 		String out = "";
 		out += "-----------------------" + "\n";
+		out += "Proc. cores: " + Runtime.getRuntime().availableProcessors() + "\n";
 		out += "Budget: " + budget + "\n";
 		out += "AP: " + ap + "\n";
 		out += "Games: " + games + "\n";
