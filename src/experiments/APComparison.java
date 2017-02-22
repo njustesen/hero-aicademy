@@ -82,11 +82,18 @@ public class APComparison {
 
 	private static void test(AI p1, String p1Name, AI p2, String p2Name, int ap, int budget, int games) {
 		
+		GameState.ACTION_POINTS = ap;
+		GameState.TURN_LIMIT = 100;
+		if (ap < 5){
+			GameState.TURN_LIMIT = GameState.TURN_LIMIT * (5 / ap);				
+		}
+		
 		String out = "";
 		out += "-----------------------" + "\n";
 		out += "Proc. cores: " + Runtime.getRuntime().availableProcessors() + "\n";
 		out += "Budget: " + budget + "\n";
 		out += "AP: " + ap + "\n";
+		out += "TURN LIMIT: " + GameState.TURN_LIMIT + "\n";
 		out += "Games: " + games + "\n";
 		out += "P1: " + p1Name + "\n";
 		out += "P2: " + p2Name + "\n";
@@ -98,9 +105,7 @@ public class APComparison {
 		for (int i = 0; i < games; i++){
 			GameArguments gameArgs = new GameArguments(false, p1, p2, "a", DECK_SIZE.STANDARD);
 			Game game = new Game(null, gameArgs);
-			GameState.ACTION_POINTS = ap;
 			game.run();
-			
 			if (game.state.getWinner() == 1){
 				p1Wins += 1;
 			} else if (game.state.getWinner() == 2){
