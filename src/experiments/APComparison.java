@@ -122,7 +122,7 @@ public class APComparison {
 		out += "Draws: " + draws + "\n";
 		out += "-----------------------" + "\n";
 		try {
-			PrintWriter writer = new PrintWriter("HAStats_b" + budget + "_ap" + ap + "_g" + games + ".txt");
+			PrintWriter writer = new PrintWriter("HAStats_p1" + p1Name + "_p2" + p2Name + "_b" + budget + "_ap" + ap + "_g" + games + ".txt");
 			writer.println(out);
 			writer.close();  
 		} catch (Exception e){

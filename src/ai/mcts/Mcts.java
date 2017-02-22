@@ -138,6 +138,7 @@ public class Mcts implements AI {
 		}
 
 		// TODO: Runs out of memory -- of course..
+		/*
 		if (RECORD_DEPTHS){
 			root.depth(0, depths, new HashSet<MctsNode>());
 			avgDepths.add(Statistics.avgDouble(depths));
@@ -146,8 +147,8 @@ public class Mcts implements AI {
 			depths.clear();
 		}
 		rollouts.add((double) rolls);
-
-		saveTree();
+		 */
+		//saveTree();
 
 		move = bestMove(state, rolls);
 		final Action action = move.get(0);
