@@ -85,7 +85,7 @@ public class APComparison {
 		GameState.ACTION_POINTS = ap;
 		GameState.TURN_LIMIT = 100;
 		if (ap < 5){
-			GameState.TURN_LIMIT = GameState.TURN_LIMIT * (5 / ap);				
+			GameState.TURN_LIMIT = (int) (GameState.TURN_LIMIT * 5.0 / (double)ap);				
 		}
 		
 		String out = "";
