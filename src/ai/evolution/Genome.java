@@ -115,7 +115,7 @@ public abstract class Genome implements Comparable<Genome> {
 			else if (i > mutIdx) {
 				state.possibleActions(possible);
 				if (!possible.contains(action))
-					if (actions.size() < i+1 && possible.contains(actions.get(i+1)))
+					if (actions.size() < i+1 && possible.contains(actions.get(i+1))) // Might never be activated
 						actions.set(i, actions.get(i+1));
 					else
 						actions.set(i, newAction(state, action));
